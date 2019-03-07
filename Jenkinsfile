@@ -50,7 +50,7 @@ pipeline {
           sh "jx step tag --version \$(cat VERSION)"
           sh "npm install"
           //sh "CI=true DISPLAY=:99 npm test"
-          sh "echo what"
+          sh "echo what ,"
           sh "export VERSION=`cat VERSION` && skaffold build -f skaffold.yaml"
           sh "jx step post build --image $DOCKER_REGISTRY/$ORG/$APP_NAME:\$(cat VERSION)"
         }
