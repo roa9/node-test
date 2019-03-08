@@ -10,7 +10,7 @@ const SECRET = process.env.SECRET_PASSPHRASE;
 // App
 const app = express();
 app.get('/', (req, res) => {
-  res.send('Hello world test\n');
+  res.send('Hello world test PR\n');
 });
 
 app.listen(PORT, HOST);
